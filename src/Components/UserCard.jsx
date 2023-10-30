@@ -1,10 +1,23 @@
 // Your code goes here
 // do a default export
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './UserCard.module.css'
 
 
 export default function UserCard(props) {
+    const [name,setName] = useState('follow')
+
+    let changeState = () => {
+        console.log('Button Clicked')
+        console.log('Current state' , name)
+        if(name === 'follow'){
+            setName('following')
+        }
+        else{
+            setName('follow')
+        }
+        console.log('Current state' , name)
+    }
   return (
     <div className={styles.card}>
         <div>
@@ -28,7 +41,7 @@ export default function UserCard(props) {
             {/* Button part */}
         </div>
         <div>
-        <button className={styles.btn}>follow</button>
+        <button className={styles.btn} onClick={changeState}>{name}</button>
         </div>
     </div>
   )
