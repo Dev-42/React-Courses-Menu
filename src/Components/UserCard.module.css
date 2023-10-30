@@ -1,0 +1,20 @@
+.card{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 40px;
+}
+#avatar{
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 50px;
+}
+.postsPart{
+    display: flex;
+    justify-content: space-between;
+}
+.btn{
+    margin-top: 70px;
+    padding: 4px;
+    width: 4rem;
+    border-radius: 3px;
+}
